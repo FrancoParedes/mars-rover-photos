@@ -1,3 +1,26 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": ["next/core-web-vitals", "airbnb", "prettier"],
+  "plugins": ["jest"],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "react/forbid-prop-types": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "react/display-name": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/no-unstable-nested-components": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "comma-dangle": "off",
+    "no-confusing-arrow": "off"
+  }
 }

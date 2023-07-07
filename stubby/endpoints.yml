@@ -1,0 +1,11 @@
+#####################################################################
+# Nasa services
+#####################################################################
+
+- request:
+    url: /mars-photos/api/v1/rovers/([0-9a-z]+)/photos?([0-9a-z]+)
+    method: GET
+  response:
+    latency: 2000
+    status: 404
+    file: './nasa/mars-photos.json'
