@@ -6,11 +6,11 @@ const useMarsPhotos = () => {
 
   const buildPhoto = (photo) => ({
     id: photo.id,
-    src: photo.img_src,
+    src: String(photo.img_src).replace('http:', 'https:'),
   });
   const buildResponse = (data) => ({
     photos: data.photos.map((photo) => buildPhoto(photo)),
-  })
+  });
 
   const getPictures = async ({
     page = '1',
