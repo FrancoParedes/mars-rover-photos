@@ -50,7 +50,7 @@ const GalleryIndex = ({ search }) => {
           <CardMessage
             src="/astronaut.svg"
             title="Houston we have a problem!"
-            text="We couldn't find any images matching your search."
+            text="We couldn't find any images matching your search. Please try again with a different date."
           />
         )}
         {showError && (
@@ -78,6 +78,7 @@ GalleryIndex.propTypes = {
 
 export async function getServerSideProps({ query }) {
   const { dateType, earthDate, sol, rover, camera, page } = query;
+
   const search = {
     dateType: dateType || 'earth',
     earthDate: earthDate || getCurrentDateFormatted(),

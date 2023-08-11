@@ -2,7 +2,7 @@ import { FormControl, TextField } from '@mui/material';
 import { Controller } from 'react-hook-form';
 import { string, bool, object } from 'prop-types';
 
-const Input = ({ control, name, label, className, defaultValue, error }) => (
+const Input = ({ control, name, label, className, defaultValue }) => (
   <FormControl fullWidth className={`!mb-4 ${className}`}>
     <Controller
       control={control}
@@ -13,8 +13,6 @@ const Input = ({ control, name, label, className, defaultValue, error }) => (
           label={label}
           variant="outlined"
           {...field}
-          error={!!error}
-          helperText={error}
           rows="3"
         />
       )}

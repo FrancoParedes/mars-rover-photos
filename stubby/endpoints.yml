@@ -7,5 +7,5 @@
     method: GET
   response:
     latency: 2000
-    status: 404
+    status: 200
     file: './nasa/mars-photos.json'

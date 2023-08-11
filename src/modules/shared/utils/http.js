@@ -30,7 +30,7 @@ export const request = async ({ url, method, body, media = false, mapper = null 
     };
   } catch (error) {
     return {
-      data: error,
+      data: 'internal error',
       status: 500,
       ok: false,
     };
